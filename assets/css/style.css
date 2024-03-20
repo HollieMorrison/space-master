@@ -19,7 +19,7 @@ body {
 h1 {
   color: #fff;
   -webkit-text-fill-color: transparent;
-  background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
   -webkit-background-clip: text;
   padding-bottom: 20px;
 }
@@ -58,7 +58,7 @@ ul {
   font-size: 1rem;
   font-weight: 600;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 5px;
   text-decoration: none;
   min-width: 100px;
   display: block;
@@ -104,3 +104,37 @@ ul li {
 
 
 /* play */
+
+
+.play_page .play_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #808080;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 5px;
+
+}
+
+.play_page .play_wrap form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #808080;
+  max-width: 500px;
+}
+
+.play_page .play_wrap form .form_elem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 20px;
+
+}
+
+.play_page .play_wrap form .form_elem span {
+  padding-bottom: 10px;
+
+}

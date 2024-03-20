@@ -10,21 +10,46 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Space Master</title>
 </head>
-<body>
-<div class="question">
+<body class="play_page">
+<div class="play_wrap">
+  <div class="question">
+  
+  </div>
+  <div class="choice">
+    <p></p>
+  
+  </div>
+  <div class="choice" id="two">
+    <p></p>
+  </div>
+  <div class="choice" id="three">
+    <p></p>
+  </div>
+  <div class="choice" id="four">
+    <p></p>
+  </div>
+  
+  
+  <form id="quiznos" onsubmit="checkAnswer(event)">
+    <label for="aliens_question" class="form_elem">
+      <span>How many aliens think rabbit is pretty?</span>
+      <input type="text" name="aliens_question" id="aliens_question">
+    </label>
+    <label for="aliens_question" class="form_elem">
+      <span>How many planets does rabbit think exist?</span>
+      <input type="text" name="space_question" id="space_question">
+    </label>
+    <label for="aliens_question" class="form_elem">
+      <span>How many times has rabbit chased a butterfly?</span>
+      <input type="text" name="butterfly_question" id="butterfly_question">
+    </label>
+    <span id="questions_completed" style="display: flex; gap: 10px;"><p id="right_answers"></p> / <p id="total_questions"></p></span>
+    <p id="answers"></p>
+    <button class="" submit>PRESS ME</button>
+  </form>
 
-</div>
-<div class="choice" id="one">
-  <p></p>
-</div>
-<div class="choice" id="two">
-  <p></p>
-</div>
-<div class="choice" id="three">
-  <p></p>
-</div>
-<div class="choice" id="four">
-  <p></p>
+
+  
 </div>
 
 <footer>
