@@ -1,28 +1,79 @@
 * {
   margin: 0;
-  padding : 0;
+  padding: 0;
 }
 
-body{
+body {
   background-image: url('../images/galaxy-background.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
 }
 
-h1{ 
-  color: antiquewhite;
-  padding : 30px;
+h1 {
+  color: #fff;
+  padding: 30px;
 }
 
-p{
-  color: antiquewhite;
-  padding : 20px;
+p {
+  color: #fff;
+  padding: 20px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  margin: auto;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-decoration: none;
+  min-width: 100px;
+  display: block;
+}
+
+.btnPrimary {
+  background-color: #86289e;
+  color: #fff;
+}
+
+ul li {
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+.play_page .quiz-title {
+  margin-bottom: 75px;
+}
+
+.play_page .options .button_section {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  gap: 20px;
 }
 
 .quiz-title, .options {
-  margin : 50px 50px;
-  width : 75%;
-  max-width : 100%;
-  background-color: black;
+  box-shadow: -1px 1px 56px 31px rgba(255, 255, 255, 0.79);
+  -webkit-box-shadow: -1px 1px 56px 31px rgba(255, 255, 255, 0.79);
+  -moz-box-shadow: -1px 1px 56px 31px rgba(255, 255, 255, 0.79);
+  width: 75%;
+  max-width: 100%;
+  background-color: #808080;
   border-radius: 50px;
   text-align: center;
 }
 
+
+/* play */
