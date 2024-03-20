@@ -1,3 +1,6 @@
+
+
+if (document.getElementById('quiznos')) {
 const quiz = document.getElementById('quiznos');
 const alienQuestion = document.getElementById('aliens_question');
 const spaceQuestion = document.getElementById('space_question');
@@ -44,3 +47,4 @@ function checkAnswer(e) {
        console.log('wrong');
     }
   }
+}

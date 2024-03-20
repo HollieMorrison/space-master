@@ -6,28 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="educational quiz game about space and planets for all ages">
   <meta name="keywords" content="space. planets. astrology. game. quiz. kids. adults.">
-  <link rel="stylesheet" href="assets/js/script.js">
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Space Master</title>
 </head>
 <body class="play_page">
 <div class="play_wrap">
-  <div class="question">
-  
-  </div>
-  <div class="choice">
-    <p></p>
-  
-  </div>
-  <div class="choice" id="two">
-    <p></p>
-  </div>
-  <div class="choice" id="three">
-    <p></p>
-  </div>
-  <div class="choice" id="four">
-    <p></p>
-  </div>
   
   
   <form id="quiznos" onsubmit="checkAnswer(event)">
@@ -48,12 +31,19 @@
     <button class="" submit>PRESS ME</button>
   </form>
 
+  <aside class="score-counter">
+   <h3>Current Score</h3>
+   <div>
+    <p>Points: </p>
+   </div>
 
+  </aside>
   
 </div>
 
 <footer>
 
+  <script src="assets/js/script.js"></script>
 </footer>
 </body>
 </html>
