@@ -18,32 +18,38 @@
       <span>How many aliens think rabbit is pretty?</span>
       <input type="text" name="aliens_question" id="aliens_question">
     </label>
-    <label for="aliens_question" class="form_elem">
+    <label for="space_question" class="form_elem">
       <span>How many planets does rabbit think exist?</span>
       <input type="text" name="space_question" id="space_question">
     </label>
-    <label for="aliens_question" class="form_elem">
+    <label for="butterfly_question" class="form_elem">
       <span>How many times has rabbit chased a butterfly?</span>
       <input type="text" name="butterfly_question" id="butterfly_question">
     </label>
-    <span id="questions_completed" style="display: flex; gap: 10px;"><p id="right_answers"></p> / <p id="total_questions"></p></span>
     <p id="answers"></p>
     <button class="" submit>PRESS ME</button>
+   
   </form>
 
   <aside class="score-counter">
    <h3>Current Score</h3>
-   <div>
-    <p>Points: </p>
+   <div class="points_cont">
+    <span id="questions_completed" style="display: flex; gap: 10px;"><p id="right_answers"></p> / <p id="total_questions"></p></span>
+    <p>Points: <span id="total_points"></span></p>
    </div>
 
   </aside>
+
+  <div class="winner" id="winner">
+    <h2>CONGRATULATIONS!</h2>
+    <p>You have completed the quiz! YOU'RE OUTTA THIS WORLD! 👽🌎</p>
+  </div>
   
 </div>
 
 <footer>
 
-  <script src="assets/js/script.js"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
 </footer>
 </body>
 </html>
