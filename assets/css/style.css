@@ -18,12 +18,33 @@ body {
 
 h1 {
   color: #fff;
+  -webkit-text-fill-color: transparent;
+  background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  -webkit-background-clip: text;
+  padding-bottom: 20px;
+}
+
+.quiz-title {
   padding: 30px;
+  max-width: 500px;
+
+
+}
+
+.content_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.options {
+  max-width: 500px;
 }
 
 p {
   color: #fff;
-  padding: 20px;
+
 }
 
 ul {
@@ -41,10 +62,16 @@ ul {
   text-decoration: none;
   min-width: 100px;
   display: block;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .btnPrimary {
   background-color: #86289e;
+  color: #fff;
+}
+
+.btnPrimary:hover {
+  background-color: #000;
   color: #fff;
 }
 
@@ -61,6 +88,7 @@ ul li {
   display: flex;
   padding: 20px;
   justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
@@ -68,10 +96,9 @@ ul li {
   box-shadow: -1px 1px 56px 31px rgba(255, 255, 255, 0.79);
   -webkit-box-shadow: -1px 1px 56px 31px rgba(255, 255, 255, 0.79);
   -moz-box-shadow: -1px 1px 56px 31px rgba(255, 255, 255, 0.79);
-  width: 75%;
-  max-width: 100%;
+
   background-color: #808080;
-  border-radius: 50px;
+  border-radius: 10px;
   text-align: center;
 }
 
