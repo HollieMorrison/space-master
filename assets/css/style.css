@@ -7,9 +7,22 @@ body{
   background-image: url('../images/galaxy-background.webp');
 }
 
-.quiz {
-  margin : auto;
-  width : 80%;
-  max-width : 750px;
-
+h1{ 
+  color: antiquewhite;
+  padding : 30px;
 }
+
+p{
+  color: antiquewhite;
+  padding : 20px;
+}
+
+.quiz-title, .options {
+  margin : 50px 50px;
+  width : 75%;
+  max-width : 100%;
+  background-color: black;
+  border-radius: 50px;
+  text-align: center;
+}
+
