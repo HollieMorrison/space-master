@@ -39,23 +39,23 @@ var questions = [
 var quizContainer = document.getElementById('quiznos');
 
 questions.forEach(function(question) {
-   var div = document.createElement('div.question');
+   var div = document.createElement('div');
    div.innerHTML = `
    <h2>${question.title}</h2>
-   <label for="${question.A}" class="form_elem">
-   <input type="radio" name="${question.id}" id="${question.id}-A">
+   <label for="${question.id}" class="form_elem">
+   <input type="radio" name="${question.id}" value="A">
    ${question.A}
     </label>
-       <label for="${question.B}" class="form_elem" >
-       <input type="radio" name="${question.id}" id="${question.id}-id="${question.id}-B">
+       <label for="${question.id}" class="form_elem" >
+       <input type="radio" name="${question.id}" value="B">
        ${question.B}
     </label>
-       <label for="${question.C}" class="form_elem">
-       <input type="radio" name="${question.id}" id="${question.id}-C">
+       <label for="${question.id}" class="form_elem">
+       <input type="radio" name="${question.id}" value="C">
        ${question.C}
     </label>
-       <label for="${question.D}" class="form_elem">
-       <input type="radio" name="${question.id}" id="${question.id}-D">
+       <label for="${question.id}" class="form_elem">
+       <input type="radio" name="${question.id}" value="D">
        ${question.D}
     </label>
 
@@ -67,8 +67,11 @@ questions.forEach(function(question) {
 
   
 let rightAnswers = 0;
+var maxRightAnswers = questions.length;
 let totalQuestions = questions.length;
 let totalPoints = 0;
+
+var maxPoints = 300;
 
 var selectedAnswer = "";
 
@@ -84,34 +87,42 @@ document.getElementById('quiznos').addEventListener('submit', function(e) {
 });
 
 
-quiz.addEventListener('submit', function(e) {
-   e.preventDefault();
-   var selectedAnswer = document.querySelector('input[type="radio"]:checked').value;
-    console.log(selectedAnswer);
-
-});
+var radioButton = document.querySelector(`input[name="${questions.id}"]:checked`);
+if (radioButton) {
+    var selectedAnswer = radioButton.value;
+} else {
+    console.log("No option selected for question " + questions.id);
+}
 
 
 function checkAnswer(e) { 
     e.preventDefault();
 
-    if (questions.correctAnswer === selectedAnswer) {
-         rightAnswers++;
-         totalPoints += 100;
-      console.log('right answer' + questions.correctAnswer);
+  
+questions.forEach(function(question) {
+    var selectedAnswer = document.querySelector(`input[name="${question.id}"]:checked`).value;
+
+    if (question.correctAnswer === selectedAnswer) {
+      if (rightAnswers < maxRightAnswers) {
+        rightAnswers++;
+      }
+        totalPoints += 100;
+        console.log('right answer: ' + question.correctAnswer);
     } else {
-      console.log('wrong answer' + questions.correctAnswer);
+        console.log('wrong answer, correct was: ' + question.correctAnswer);
     }
+});
+
     
     
-    if (totalPoints >= 300) {
-    quiz.style.display = 'none';
+   //  if (totalPoints >= 300) {
+   //  quiz.style.display = 'none';
     
-    } 
-    if (totalPoints >= 300) {
-    winner.style.display = 'block';
+   //  } 
+   //  if (totalPoints >= 300) {
+   //  winner.style.display = 'block';
     
-    } 
+   //  } 
   }
 }
 
