@@ -14,18 +14,13 @@
   
   
   <form id="quiznos" onsubmit="checkAnswer(event)">
-    <label for="aliens_question" class="form_elem">
-      <span>How many planets are in our solar system?</span>
-      <input type="text" name="aliens_question" id="aliens_question">
-    </label>
-    <label for="space_question" class="form_elem">
-      <span>What planet is closest to the sun?</span>
-      <input type="text" name="space_question" id="space_question">
-    </label>
-    <label for="butterfly_question" class="form_elem">
-      <span>How many rings does Saturn have?</span>
-      <input type="text" name="butterfly_question" id="butterfly_question">
-    </label>
+
+    
+    
+    <div class="questions_nav">
+      <button class="prev" type="button" onclick="prevQuestion()">Previous</button>
+      <button class="next" type="button" onclick="nextQuestion()">Next</button>
+    </div>
     <p id="answers"></p>
     <button class="" submit>PRESS ME</button>
    
