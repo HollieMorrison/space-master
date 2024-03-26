@@ -33,42 +33,16 @@ var questions = [
       D: "Mercury",
       correctAnswer: "C"
    },
-    {
-      id: "saturnQuestionsss",
+      {
+      id: "saturnQuestion",
       title: "How many rings does Saturn have?",
       A: "it lives next door",
       B: "no idea",
       C: "i am sure it is pretty far",
       D: "Mercury",
-      correctAnswer: "C"
+      correctAnswer: "D"
    },
-    {
-      id: "saturnQuestionsssss",
-      title: "How many rings does Saturn have?",
-      A: "it lives next door",
-      B: "no idea",
-      C: "i am sure it is pretty far",
-      D: "Mercury",
-      correctAnswer: "C"
-   },
-    {
-      id: "saturnQuestionssssssss",
-      title: "How many rings does Saturn have?",
-      A: "it lives next door",
-      B: "no idea",
-      C: "i am sure it is pretty far",
-      D: "Mercury",
-      correctAnswer: "C"
-   },
-    {
-      id: "saturnQuestionssssssssssss",
-      title: "How many rings does Saturn have?",
-      A: "it lives next door",
-      B: "no idea",
-      C: "i am sure it is pretty far",
-      D: "Mercury",
-      correctAnswer: "C"
-   },
+
 ] ;
 
 
@@ -125,20 +99,47 @@ document.getElementById('quiznos').addEventListener('submit', function(e) {
     document.getElementById('total_points').textContent = totalPoints;
 });
 
+document.getElementById('question-0').style.display = 'block';
+document.getElementById('question-0').classList.add('current_question');
+// Event listener for the next button.
+document.getElementById('next').addEventListener('click', function() {
+    var currentQuestion = document.querySelector('.current_question');
+    var nextQuestion = currentQuestion.nextElementSibling;
+    currentQuestion.classList.remove('current_question');
+    currentQuestion.style.display = 'none';
+   if(nextQuestion) {
+       nextQuestion.classList.add('current_question');
+       nextQuestion.style.display = 'block';
+    }
+    if(nextQuestion === null) {
+        document.getElementById('next').style.display = 'none';
+    }
+});
+document.getElementById('prev').addEventListener('click', function() {
+    var currentQuestion = document.querySelector('.current_question');
+    var prevQuestion = currentQuestion.previouselementsibling;
+    currentQuestion.classList.add('current_question');
+    currentQuestion.style.display = 'none';
+   if(prevQuestion) {
+       prevQuestion.classList.add('current_question');
+       prevQuestion.style.display = 'block';
+    }
+    if(prevQuestion === null) {
+        document.getElementById('prev').style.display = 'none';
+    }
+});
+
 
 // A function that checks the correct answers with the users input.
 function checkAnswer(e) { 
     questions.forEach(function(question, index) {
-
       var questionDiv = document.getElementById(`question-${index}`);
       var selectedAnswer = questionDiv.querySelector(`input[name="${question.id}"]:checked`);
+      var halfway = questions.length / 2;
       
-
 // Check to see if user has submitted correct answers.
         if (selectedAnswer && selectedAnswer.value === question.correctAnswer) { 
-
             if(!question.answeredCorrectly) {
-
                 if (rightAnswers < maxRightAnswers) {
                     rightAnswers+= 1;
                 }
@@ -146,17 +147,19 @@ function checkAnswer(e) {
                     totalPoints+= 100;
                 }
                 question.answeredCorrectly = true;
-                selectedAnswer.classlist.add('correct')
             }
-            if (questions.length === rightAnswers) {
-                console.log('you have finished the quiz!');
-               
-                alert('We win!!');
-             
-            document.querySelector('.checkAnswers').classlist.add('winner');
-            // selectedAnswered.classlist.add('correct');
+            if (rightAnswers.value >= halfway.value) {
+            console.log('you are halfway through the quiz!');
+            alert('You are halfway through the quiz!');
             }
-
+                
+            if (rightAnswers === questions.length) {
+             console.log('you have finished the quiz!');
+             alert('We win!!');
+             document.querySelector('.checkAnswers').classList.add('all-answered-true');
+             selectedAnswered.class
+             List.add('correct');
+            }
         console.log('right answer: ' + question.correctAnswer);
         document.getElementById("total_questions").textContent = totalQuestions;
         document.getElementById("right_answers").textContent = rightAnswers;
@@ -165,7 +168,11 @@ function checkAnswer(e) {
         } else {
             console.log('wrong answer, correct was: ' + question.correctAnswer +  "" + question.title);
         }
+        
     });
+
+    console.log('right answers: ' + rightAnswers);
+
 }
 
 // Event listener to check the answers when the answers are submitted.

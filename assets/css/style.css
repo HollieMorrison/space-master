@@ -143,8 +143,8 @@ ul li {
   background-color: #808080;
   max-width: 500px;
   padding: 20px;
-  max-height: 700px;
-  overflow-y: scroll;
+
+  /* overflow-y: scroll; */
 }
 
 /* Styling for form elements in play wrapper */
@@ -168,6 +168,7 @@ ul li {
 
 form.quiz_cont .question_cont {
   padding-bottom: 30px;
+  display: none;
 }
 
 form.quiz_cont .question_cont h2 {
@@ -202,7 +203,7 @@ form.quiz_cont .question_cont:last-of-type {
   display: none;
 }
 
-.checkAnswers.correct {
+.checkAnswers.all-answered-true {
   user-select: none;
   background-color: #00ff00;
 
