@@ -1,10 +1,10 @@
 
 
 if (document.getElementById('quiznos')) {
+
 var quiz = document.getElementById('quiznos');
-const alienQuestion = document.getElementById('aliens_question');
-const spaceQuestion = document.getElementById('space_question');
-const butterflyQuestion = document.getElementById('butterfly_question');
+
+
 var questions = [
    {
       id: "moonQuestion",
@@ -13,7 +13,7 @@ var questions = [
       B: "no idea",
       C: "i am sure it is pretty far",
       D: "some km",
-      correctAnswer: "C"
+      correctAnswer: "A"
    },
      {
       id: "planetQuestion",
@@ -22,7 +22,7 @@ var questions = [
       B: "no idea",
       C: "i am sure it is pretty far",
       D: "some km",
-      correctAnswer: "C"
+      correctAnswer: "B"
    },
      {
       id: "saturnQuestion",
@@ -31,7 +31,7 @@ var questions = [
       B: "no idea",
       C: "i am sure it is pretty far",
       D: "Mercury",
-      correctAnswer: "D"
+      correctAnswer: "C"
    },
 ] ;
 
@@ -43,19 +43,20 @@ questions.forEach(function(question) {
    div.innerHTML = `
    <h2>${question.title}</h2>
    <label for="${question.id}" class="form_elem">
-   <input type="radio" name="${question.id}" value="A">
+   <input type="radio" name="${question.id}"  value="A">
    ${question.A}
     </label>
+    </label>
        <label for="${question.id}" class="form_elem" >
-       <input type="radio" name="${question.id}" value="B">
+       <input type="radio" name="${question.id}"  value="B">
        ${question.B}
     </label>
        <label for="${question.id}" class="form_elem">
-       <input type="radio" name="${question.id}" value="C">
+       <input type="radio" name="${question.id}"  value="C">
        ${question.C}
     </label>
        <label for="${question.id}" class="form_elem">
-       <input type="radio" name="${question.id}" value="D">
+       <input type="radio" name="${question.id}"  value="D">
        ${question.D}
     </label>
 
@@ -71,7 +72,7 @@ var maxRightAnswers = questions.length;
 let totalQuestions = questions.length;
 let totalPoints = 0;
 
-var maxPoints = 300;
+var maxPoints = questions.length + "00";
 
 var selectedAnswer = "";
 
@@ -87,46 +88,31 @@ document.getElementById('quiznos').addEventListener('submit', function(e) {
 });
 
 
-var radioButton = document.querySelector(`input[name="${questions.id}"]:checked`);
-if (radioButton) {
-    var selectedAnswer = radioButton.value;
-} else {
-    console.log("No option selected for question " + questions.id);
-}
-
 
 function checkAnswer(e) { 
-    e.preventDefault();
+    questions.forEach(function(question) {
+        var selectedAnswer = document.querySelectorAll(`input[name="${question.id}"]:checked`);
 
-  
-questions.forEach(function(question) {
-    var selectedAnswer = document.querySelector(`input[name="${question.id}"]:checked`).value;
-
-    if (question.correctAnswer === selectedAnswer) {
-      if (rightAnswers < maxRightAnswers) {
-        rightAnswers++;
-      }
-        totalPoints += 100;
-        console.log('right answer: ' + question.correctAnswer);
-    } else {
-        console.log('wrong answer, correct was: ' + question.correctAnswer);
-    }
-});
-
-    
-    
-   //  if (totalPoints >= 300) {
-   //  quiz.style.display = 'none';
-    
-   //  } 
-   //  if (totalPoints >= 300) {
-   //  winner.style.display = 'block';
-    
-   //  } 
-  }
+        if (selectedAnswer && selectedAnswer.value === question.correctAnswer) { 
+            if (rightAnswers < maxRightAnswers) {
+                rightAnswers++;
+            }
+            if (totalPoints < maxPoints) {
+                totalPoints += 100;
+            }
+            console.log('right answer: ' + question.correctAnswer);
+        } else {
+            console.log('wrong answer, correct was: ' + question.correctAnswer +  "" + question.title);
+        }
+    });
 }
 
 
 
+document.getElementById('quiznos').addEventListener('submit', function(e) {
+    e.preventDefault();
+    checkAnswer(e);
 
-console.log(selectedAnswer)
+});
+
+}
