@@ -11,19 +11,21 @@
 </head>
 <body class="play_page">
 <div class="play_wrap">
-  
-  
-  <form id="quiznos" >
-
-    
-    
-    <div class="questions_nav">
-      <button class="prev" type="button" onclick="prevQuestion()">Previous</button>
-      <button class="next" type="button" onclick="nextQuestion()">Next</button>
-    </div>
-    <p id="answers"></p>
-    <button class="" submit>PRESS ME</button>
-   
+  <form class="quiz_cont" id="quiznos" >
+   <div id="questions" class="questions"></div>    
+   <p id="answers"></p>
+   <div class="buttons_wrap">
+     <div class="btn_cont">
+       <button class="checkAnswers" submit>PRESS ME</button>
+       <button class="tryAgain">
+         <a href="javascript:window.location.href=window.location.href">Try again?</a>
+        </button>
+     </div>
+      <div class="questions_nav">
+            <button class="prev" type="button" onclick="prevQuestion()">Previous</button>
+            <button class="next" type="button" onclick="nextQuestion()">Next</button>
+      </div>
+   </div>
   </form>
 
   <aside class="score-counter">

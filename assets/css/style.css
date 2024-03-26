@@ -3,19 +3,21 @@
   margin: 0;
   padding: 0;
 }
+
 /* Styles for body and setting the background image*/
 body {
   background-image: url('../images/galaxy-background.webp');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-/* Make content centered vertically and horizontally */
+  /* Make content centered vertically and horizontally */
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 /* Styles for h1 and color gradient used for text */
 h1 {
   color: #fff;
@@ -24,11 +26,13 @@ h1 {
   -webkit-background-clip: text;
   padding-bottom: 20px;
 }
+
 /* Styles for class quiz-title */
 .quiz-title {
   padding: 30px;
   max-width: 500px;
 }
+
 /* Styles for class content_wrapper */
 .content_wrap {
   display: flex;
@@ -40,17 +44,20 @@ h1 {
 .options {
   max-width: 500px;
 }
+
 /* All paragraph tag styling */
 p {
   color: #fff;
 
 }
+
 /* Changing the default margin and padding for the unordered lists */
 ul {
   margin: 0;
   padding: 0;
   margin: auto;
 }
+
 /* Styling for buttons */
 .btn {
   padding: 10px 20px;
@@ -63,25 +70,30 @@ ul {
   display: block;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
 /* Styling for primary buttons */
 .btnPrimary {
   background-color: #86289e;
   color: #fff;
 }
+
 /* Change color on buttons when hovered over */
 .btnPrimary:hover {
   background-color: #000;
   color: #fff;
 }
+
 /* Styling for unordered list, list items */
 ul li {
   color: #fff;
   padding-bottom: 10px;
 }
+
 /* Styling for quiz title and options classes */
 .play_page .quiz-title {
   margin-bottom: 75px;
 }
+
 /* Styling for play page, options  and button selection classes */
 .play_page .options .button_section {
   display: flex;
@@ -90,6 +102,7 @@ ul li {
   align-items: center;
   gap: 20px;
 }
+
 /* Styling for quiz title and options classes, adds shadow halo effect around content */
 .quiz-title, .options {
   box-shadow: -1px 1px 56px 31px rgba(255, 255, 255, 0.79);
@@ -101,6 +114,14 @@ ul li {
   text-align: center;
 }
 
+.play_page .play_wrap form .questions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
 
 /* play */
 
@@ -112,16 +133,20 @@ ul li {
   border-radius: 5px;
   gap: 20px;
 }
+
 /* Styling for form in play wrapper */
 .play_page .play_wrap form {
-  display: flex;
-  flex-direction: column-reverse;
+  /* display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: center; */
   background-color: #808080;
   max-width: 500px;
   padding: 20px;
+  max-height: 700px;
+  overflow-y: scroll;
 }
+
 /* Styling for form elements in play wrapper */
 .play_page .play_wrap form .form_elem {
   display: flex;
@@ -130,11 +155,32 @@ ul li {
   padding-bottom: 20px;
   gap: 10px;
 }
+
+.play_page .play_wrap form .form_elem:last-of-type {
+  padding-bottom: 0px;
+}
+
 /* Styling for spans in form elemenents */
 .play_page .play_wrap form .form_elem span {
   padding-bottom: 10px;
 
 }
+
+form.quiz_cont .question_cont {
+  padding-bottom: 30px;
+}
+
+form.quiz_cont .question_cont h2 {
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+
+}
+
+form.quiz_cont .question_cont:last-of-type {
+  padding-bottom: 0px;
+}
+
 /* Styles for score counter content */
 .score-counter {
   height: fit-content;
@@ -154,4 +200,29 @@ ul li {
 
 .form_elem .hide {
   display: none;
+}
+
+.checkAnswers.correct {
+  user-select: none;
+  background-color: #00ff00;
+
+}
+
+.checkAnswers {
+  background-color: red;
+  color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+
+.buttons_wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0px;
 }
