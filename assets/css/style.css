@@ -1,21 +1,22 @@
+/* Change default margin and padding for all elements*/
 * {
   margin: 0;
   padding: 0;
 }
-
+/* Styles for body and setting the background image*/
 body {
   background-image: url('../images/galaxy-background.webp');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+/* Make content centered vertically and horizontally */
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
-
+/* Styles for h1 and color gradient used for text */
 h1 {
   color: #fff;
   -webkit-text-fill-color: transparent;
@@ -23,36 +24,34 @@ h1 {
   -webkit-background-clip: text;
   padding-bottom: 20px;
 }
-
+/* Styles for class quiz-title */
 .quiz-title {
   padding: 30px;
   max-width: 500px;
-
-
 }
-
+/* Styles for class content_wrapper */
 .content_wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
+/* Styling for class of options*/
 .options {
   max-width: 500px;
 }
-
+/* All paragraph tag styling */
 p {
   color: #fff;
 
 }
-
+/* Changing the default margin and padding for the unordered lists */
 ul {
   margin: 0;
   padding: 0;
   margin: auto;
 }
-
+/* Styling for buttons */
 .btn {
   padding: 10px 20px;
   font-size: 1rem;
@@ -64,26 +63,26 @@ ul {
   display: block;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-
+/* Styling for primary buttons */
 .btnPrimary {
   background-color: #86289e;
   color: #fff;
 }
-
+/* Change color on buttons when hovered over */
 .btnPrimary:hover {
   background-color: #000;
   color: #fff;
 }
-
+/* Styling for unordered list, list items */
 ul li {
   color: #fff;
   padding-bottom: 10px;
 }
-
+/* Styling for quiz title and options classes */
 .play_page .quiz-title {
   margin-bottom: 75px;
 }
-
+/* Styling for play page, options  and button selection classes */
 .play_page .options .button_section {
   display: flex;
   padding: 20px;
@@ -91,7 +90,7 @@ ul li {
   align-items: center;
   gap: 20px;
 }
-
+/* Styling for quiz title and options classes, adds shadow halo effect around content */
 .quiz-title, .options {
   box-shadow: -1px 1px 56px 31px rgba(255, 255, 255, 0.79);
   -webkit-box-shadow: -1px 1px 56px 31px rgba(255, 255, 255, 0.79);
@@ -105,18 +104,15 @@ ul li {
 
 /* play */
 
-
+/* Styling for play wrapper */
 .play_page .play_wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-
-
-
   border-radius: 5px;
   gap: 20px;
 }
-
+/* Styling for form in play wrapper */
 .play_page .play_wrap form {
   display: flex;
   flex-direction: column-reverse;
@@ -126,7 +122,7 @@ ul li {
   max-width: 500px;
   padding: 20px;
 }
-
+/* Styling for form elements in play wrapper */
 .play_page .play_wrap form .form_elem {
   display: flex;
   flex-direction: row;
@@ -134,12 +130,12 @@ ul li {
   padding-bottom: 20px;
   gap: 10px;
 }
-
+/* Styling for spans in form elemenents */
 .play_page .play_wrap form .form_elem span {
   padding-bottom: 10px;
 
 }
-
+/* Styles for score counter content */
 .score-counter {
   height: fit-content;
   align-self: flex-start;
