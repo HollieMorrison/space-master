@@ -29,6 +29,10 @@ h1 {
 
 }
 
+.last_question {
+  display: none;
+}
+
 /* Styles for class quiz-title */
 .quiz-title {
   padding: 30px;
@@ -89,6 +93,10 @@ ul {
 ul li {
   color: #fff;
   padding-bottom: 10px;
+}
+
+footer {
+  margin-top: 60px;
 }
 
 /* Styling for quiz title and options classes */
@@ -229,13 +237,20 @@ form.quiz_cont .question_cont:last-of-type {
   position: relative;
 }
 
+.winner_wrap .winner p {
+
+  color: #000;
+
+}
+
 .winner_wrap .winner .close {
-  padding: 20px;
+  padding: 0px 7px;
   position: absolute;
   top: -20px;
   right: -20px;
   background-color: #fff;
   color: #000;
+  cursor: pointer;
 }
 
 .form_elem .show {
@@ -269,4 +284,8 @@ form.quiz_cont .question_cont:last-of-type {
   align-items: center;
   width: 100%;
   padding: 20px 0px;
+}
+
+.question_count {
+  padding-bottom: 20px;
 }
