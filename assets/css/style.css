@@ -16,6 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 /* Styles for h1 and color gradient used for text */
@@ -25,6 +26,7 @@ h1 {
   background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
   -webkit-background-clip: text;
   padding-bottom: 20px;
+
 }
 
 /* Styles for class quiz-title */
@@ -141,7 +143,7 @@ ul li {
   align-items: flex-start;
   justify-content: center; */
   background-color: #808080;
-  max-width: 500px;
+  width: 300px;
   padding: 20px;
 
   /* overflow-y: scroll; */
@@ -178,9 +180,10 @@ form.quiz_cont .question_cont h2 {
 
 }
 
-form .questions_map  {
-padding-bottom: 10px;
+form .questions_map {
+  padding-bottom: 10px;
 }
+
 form.quiz_cont .question_cont:last-of-type {
   padding-bottom: 0px;
 }
@@ -196,6 +199,43 @@ form.quiz_cont .question_cont:last-of-type {
 
 .winner {
   display: none;
+}
+
+.winner_wrap {
+  display: none;
+}
+
+.winner_wrap.show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0c0c0cad;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.winner_wrap .winner {
+  padding: 50px;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.winner_wrap .winner .close {
+  padding: 20px;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: #fff;
+  color: #000;
 }
 
 .form_elem .show {

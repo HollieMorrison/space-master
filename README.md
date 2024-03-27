@@ -1,39 +1,243 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Space Master
 
-Welcome,
+Space Master is a short interactive educational quiz for all age groups that involves answering questions related to space and the solar system. Easy to navigate for all ages and users of technology
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Am i repsonsive](./assets/readme/am-i-responsive-image.png)
+[View 5 super foods your body needs live project here](https://holliemorrison.github.io/superfoods/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Table of contents :
 
-## Codeanywhere Reminders
+### [User Experience (UX)](#user-experience-ux-1)
+* [User Stories](#user-stories)
+### [Features](#features)
+* [Existing Features](#existing-features)
+### [Features Left To Implement](#features-left-to-implement-1)
+### [Design](#design-1)
+### [Technologies Used](#technologies-used-1)
+### [frameworks](#frameworks-libraries-programs-used-1)
+### [Testing](#testing-1)
+* [Validation Results](#validation-results)
+* [Manual Testing](#manual-testing)
+* [Lighthouse Report](#lighthouse-report)
+### [Deployment and local development](#deployment-and-local-development-1)
+* [GitHub Pages](#github-pages)
+* [Forking the GitHub Repository](#forking-the-github-repository)
+* [Local Clone](#local-clone)
+### [Credits](#credits-1)
+### [Acknowledgements](#acknowledgements-1)
+---
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## User Experience (UX)
 
-`python3 -m http.server`
+This website was made to attract users who want to learn and test their knowledge about space.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+There is clear navigation to be used on all pages.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+People can interact with this short quiz and allows people of all ages to be included.
 
-`http_server`
+### User Stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+*First-time visitor goals
+  * Understand the main purpose of the site and answer quiz questions about space.
+  * To navigate the site easily.
+  * To go through the questions and receive an end result message based on their points.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- - -
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Features
 
-To log into the Heroku toolbelt CLI:
+* Home page with a play button and rules page.
+* 8 fun questions about space.
+* In future, there would be more questions added.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Index.html](./assets/readme/index.html-pageshot.png)
+![Stories.html](./assets/readme/stories.html-pageshot.png)
+![Contact.html](./assets/readme/contact.html-pageshot.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Design
+
+* Simple design with basic colors and fonts for accessibility and simplicity on the eyes.
+* Curved edges on home page to relax the eyes and not appear so harsh.
+* Space themed background to get the users attention.
+
+
+
+## Technologies Used
+
+* [HTML5]((https://en.wikipedia.org/wiki/HTML5))
+* [CSS3]((https://en.wikipedia.org/wiki/CSS))
+* [JavaScript]((https://en.wikipedia.org/wiki/JavaScript))
+
+## Frameworks, Libraries & Programs Used
+
+* [Github](https://github.com/)
+    * Deployment of the website and storing the files online.
+* [Am I Responsive](https://ui.dev/amiresponsive?url=https://holliemorrison.github.io/superfoods/)
+    * Mockup picture for the README file.
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 ---
 
-Happy coding!
+## Testing
+
+The W3C Markup Validator and W3C CSS Validator services were used to validate every page of the project to ensure there were no errors.
+
+ * [W3C Markup Validtor](https://validator.w3.org/)
+ * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+### Validation results
+
+<details>
+<summary>index.html
+</summary>
+
+![Index Page validation result](./assets/readme/html-validation.png)
+</details>
+<details>
+<summary>play.html
+</summary>
+
+![Contact page validation result](./assets/readme/html-validation.png)
+</details>
+<details>
+<summary>rules.html
+</summary>
+
+![Thanks page validation result](./assets/readme/html-validation.png)
+</details>
+<details>
+<summary>thanks.html
+</summary>
+
+
+![CSS validation result](./assets/readme/html-validation.png)
+</details>
+
+<summary>contact.css
+</summary>
+
+![CSS validation result](./assets/readme/css-validation.png)
+</details>
+
+<summary>home.css
+</summary>
+
+![CSS validation result](./assets/readme/css-validation.png)
+</details>
+
+### Manual Testing
+
+* The website was tested on Google Chrome, Microsoft Edge, and Opera browsers.
+* The website was viewed on a desktop computer, laptop, and Samsung Galaxy A52 mobile phone.
+* A large amount of testing was done to ensure links between pages are working correctly on all pages.
+* Family and friends were asked to review the website for a better understanding of the user experience.
+* Dev Tools was used to test how the site looks on various screen sizes.
+
+### Lighthouse Report
+
+#### Mobile analysis
+<details>
+<summary>Index Page
+</summary>
+
+![Index Page lighthouse report](./assets/readme/index.html-lighthouse-mobile.png)
+</details>
+<details>
+<summary>Stories Page
+</summary>
+
+![Stories Page lighthouse report](./assets/readme/stories.html-lighthouse-mobile.png)
+</details>
+<details>
+<summary>Contact Page
+</summary>
+
+![Contact Page lighthouse report](./assets/readme/contact.html-lighthouse-mobile.png)
+</details>
+<details>
+<summary>Thanks Page
+</summary>
+
+![Thanks Page lighthouse report](./assets/readme/thanks.html-lighthouse-mobile.png)
+</details>
+
+#### Desktop analysis
+<details>
+<summary>Index Page
+</summary>
+
+![Index Page lighthouse report](./assets/readme/index.html-lighthouse-desktop.png)
+</details>
+<details>
+<summary>Stories
+</summary>
+
+![Stories lighthouse report](./assets/readme/stories.html-lighthouse-desktop.png)
+</details>
+<details>
+<summary>Contact Page
+</summary>
+
+![Contact Page lighthouse report](./assets/readme/contact.html-lighthouse-desktop.png)
+</details>
+<details>
+<summary>Thanks Page
+</summary>
+
+![Thanks Page lighthouse report](./assets/readme/thanks.html-lighthouse-desktop.png)
+</details>
+
+---
+
+## Deployment and local development
+
+### GitHub Pages
+
+GitHub Pages used to deploy live version of the website.
+1. Log in to GitHub and locate [GitHub Repository Space-master](https://holliemorrison.github.io/superfoods/)
+2. At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
+3. Scroll down the Settings page until you locate "GitHub Pages".
+4. Under "Source", click the dropdown menu "None" and select "Main" and click "Save".
+5. The page will automatically refresh.
+6. Scroll back to locate the now-published site [link](https://holliemorrison.github.io/superfoods/index.html) in the "GitHub Pages" section.
+
+### Forking the GitHub Repository
+
+By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
+
+1. Log in to GitHub and locate [GitHub Repository Space-master](https://holliemorrison.github.io/superfoods/)
+2. At the top of the Repository(under the main navigation) locate "Fork" button.
+3. Now you should have a copy of the original repository in your GitHub account.
+
+### Local Clone
+
+1. Log in to GitHub and locate [GitHub Repository Space-master](https://holliemorrison.github.io/superfoods/)
+2. Under the repository name click "Clone or download"
+3. Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone` and then paste The URL copied in the step 3.
+7. Press Enter and your local clone will be created.
+
+---
+## Credits
+
+### Code
+ * Understanding the concept of flexbox was learned through [Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+ * The README template was helpfully provided by [Code Institute (template)](https://github.com/Code-Institute-Solutions/SampleREADME)
+
+### Content
+
+ * Information about foods taken from [Google](https://www.google.com/)
+ 
+
+### Media 
+
+ * [Space Background Photo](https://www.google.co.uk/) Image of space from google images.
+ 
+---
+
+## Acknowledgements
+
+ * My mentor Mitko Bachvarov provided helpful feedback regarding improvements and criteria.
+ * Slack community for encouragement and information.

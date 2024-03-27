@@ -16,76 +16,76 @@ var questions = [
       D: "50000 km",
       correctAnswer: "A"
    },
-     {
-      id: "planetQuestion",      
-      questionNumber: 2,
-      title: "What planet is closest to the sun?",
-      A: "Saturn",
-      B: "Mercury",
-      C: "Earth",
-      D: "Uranus",
-      correctAnswer: "B"
-   },
-     {
-      id: "saturnQuestion",      
-      questionNumber: 3,
-      title: "How many rings does Saturn have?",
-      A: "24",
-      B: "6",
-      C: "8",
-      D: "3",
-      correctAnswer: "C"
-   },
-      {
-      id: "plutoQuestion",      
-      questionNumber: 4,
-      title: "What planet was removed as being classed as a planet?",
-      A: "Jupiter",
-      B: "Neptune",
-      C: "Mercury",
-      D: "Pluto",
-      correctAnswer: "D"
-   },
-     {
-    id: "marsQuestion",      
-    questionNumber: 5,
-    title: "What planet apart from Earth is said to be able to support life?",
-    A: "Jupiter",
-    B: "Neptune",
-    C: "Mercury",
-    D: "Mars",
-    correctAnswer: "D"
- },
- {
-    id: "jupiterQuestion",      
-    questionNumber: 6,
-    title: "What planet is the largest in our solar system?",
-    A: "Jupiter",
-    B: "Neptune",
-    C: "Venus",
-    D: "Earth",
-    correctAnswer: "A"
- },
- {
-    id: "starQuestion",      
-    questionNumber: 6,
-    title: "What is a star?",
-    A: "Dust",
-    B: "Water",
-    C: "Fire",
-    D: "Gas",
-    correctAnswer: "D"
- },
- {
-    id: "earthQuestion",      
-    questionNumber: 6,
-    title: "What is the center of the earth called?",
-    A: "Hole",
-    B: "Core",
-    C: "Hell",
-    D: "Pulp",
-    correctAnswer: "B"
- },
+//      {
+//       id: "planetQuestion",      
+//       questionNumber: 2,
+//       title: "What planet is closest to the sun?",
+//       A: "Saturn",
+//       B: "Mercury",
+//       C: "Earth",
+//       D: "Uranus",
+//       correctAnswer: "B"
+//    },
+//      {
+//       id: "saturnQuestion",      
+//       questionNumber: 3,
+//       title: "How many rings does Saturn have?",
+//       A: "24",
+//       B: "6",
+//       C: "8",
+//       D: "3",
+//       correctAnswer: "C"
+//    },
+//       {
+//       id: "plutoQuestion",      
+//       questionNumber: 4,
+//       title: "What planet was removed as being classed as a planet?",
+//       A: "Jupiter",
+//       B: "Neptune",
+//       C: "Mercury",
+//       D: "Pluto",
+//       correctAnswer: "D"
+//    },
+//      {
+//     id: "marsQuestion",      
+//     questionNumber: 5,
+//     title: "What planet apart from Earth is said to be able to support life?",
+//     A: "Jupiter",
+//     B: "Neptune",
+//     C: "Mercury",
+//     D: "Mars",
+//     correctAnswer: "D"
+//  },
+//  {
+//     id: "jupiterQuestion",      
+//     questionNumber: 6,
+//     title: "What planet is the largest in our solar system?",
+//     A: "Jupiter",
+//     B: "Neptune",
+//     C: "Venus",
+//     D: "Earth",
+//     correctAnswer: "A"
+//  },
+//  {
+//     id: "starQuestion",      
+//     questionNumber: 7,
+//     title: "What is a star?",
+//     A: "Dust",
+//     B: "Water",
+//     C: "Fire",
+//     D: "Gas",
+//     correctAnswer: "D"
+//  },
+//  {
+//     id: "earthQuestion",      
+//     questionNumber: 8,
+//     title: "What is the center of the earth called?",
+//     A: "Hole",
+//     B: "Core",
+//     C: "Hell",
+//     D: "Pulp",
+//     correctAnswer: "B"
+//  },
 ] ;
 
 
@@ -113,7 +113,6 @@ questions.forEach(function(question, index) {
     <input type="radio" name="${question.id}"  value="A">
     ${question.A}
     </label>
-    </label>
     <label for="${question.id}" class="form_elem" >
     <input type="radio" name="${question.id}"  value="B">
     ${question.B}
@@ -135,7 +134,7 @@ questions.forEach(function(question, index) {
 document.getElementById('total_questions').textContent = totalQuestions;
 document.getElementById('right_answers').textContent = rightAnswers;
 document.getElementById('total_points').textContent = totalPoints;
-document.getElementById('current_question').textContent = currentQuestionIndex ;
+
 // Event listener for submitting the answers.
 document.getElementById('quiznos').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -213,6 +212,10 @@ function checkAnswer(e) {
             console.log('you are halfway through the quiz!');
             alert('You are halfway through the quiz!');
             }
+
+            if(questionDiv === questions.length) {
+                alert('LAST QUESTION FAM!!')
+            }
                 
             console.log('right answer: ' + question.correctAnswer);
             document.getElementById("total_questions").textContent = totalQuestions;
@@ -223,6 +226,8 @@ function checkAnswer(e) {
             if (rightAnswers === questions.length) {
              console.log('you have finished the quiz!');
              document.querySelector('.checkAnswers').classList.add('all-answered-true');
+
+             document.querySelector('.winner_wrap').classList.add('show');
              
             }
         
@@ -244,7 +249,8 @@ document.getElementById('quiznos').addEventListener('submit', function(e) {
 });
 
 
-
-
+document.querySelector('.close').addEventListener('click', function() {
+    document.querySelector('.winner_wrap').classList.remove('show');
+});
 
 }
