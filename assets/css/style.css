@@ -178,6 +178,9 @@ form.quiz_cont .question_cont h2 {
 
 }
 
+form .questions_map  {
+padding-bottom: 10px;
+}
 form.quiz_cont .question_cont:last-of-type {
   padding-bottom: 0px;
 }

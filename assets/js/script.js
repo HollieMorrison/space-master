@@ -8,41 +8,84 @@ var quiz = document.getElementById('quiznos');
 var questions = [
    {
       id: "moonQuestion",
-      title: "How far is the Moon?",
-      A: "it lives next door",
-      B: "no idea",
-      C: "i am sure it is pretty far",
-      D: "some km",
+      questionNumber: 1,
+      title: "How far is the Moon from Earth?",
+      A: "38400 km",
+      B: "12000 km",
+      C: "30000 km",
+      D: "50000 km",
       correctAnswer: "A"
    },
      {
-      id: "planetQuestion",
+      id: "planetQuestion",      
+      questionNumber: 2,
       title: "What planet is closest to the sun?",
-      A: "it lives next door",
-      B: "no idea",
-      C: "i am sure it is pretty far",
-      D: "some km",
+      A: "Saturn",
+      B: "Mercury",
+      C: "Earth",
+      D: "Uranus",
       correctAnswer: "B"
    },
      {
-      id: "saturnQuestion",
+      id: "saturnQuestion",      
+      questionNumber: 3,
       title: "How many rings does Saturn have?",
-      A: "it lives next door",
-      B: "no idea",
-      C: "i am sure it is pretty far",
-      D: "Mercury",
+      A: "24",
+      B: "6",
+      C: "8",
+      D: "3",
       correctAnswer: "C"
    },
       {
-      id: "saturnQuestion",
-      title: "How many rings does Saturn have?",
-      A: "it lives next door",
-      B: "no idea",
-      C: "i am sure it is pretty far",
-      D: "Mercury",
+      id: "plutoQuestion",      
+      questionNumber: 4,
+      title: "What planet was removed as being classed as a planet?",
+      A: "Jupiter",
+      B: "Neptune",
+      C: "Mercury",
+      D: "Pluto",
       correctAnswer: "D"
    },
-
+     {
+    id: "marsQuestion",      
+    questionNumber: 5,
+    title: "What planet apart from Earth is said to be able to support life?",
+    A: "Jupiter",
+    B: "Neptune",
+    C: "Mercury",
+    D: "Mars",
+    correctAnswer: "D"
+ },
+ {
+    id: "jupiterQuestion",      
+    questionNumber: 6,
+    title: "What planet is the largest in our solar system?",
+    A: "Jupiter",
+    B: "Neptune",
+    C: "Venus",
+    D: "Earth",
+    correctAnswer: "A"
+ },
+ {
+    id: "starQuestion",      
+    questionNumber: 6,
+    title: "What is a star?",
+    A: "Dust",
+    B: "Water",
+    C: "Fire",
+    D: "Gas",
+    correctAnswer: "D"
+ },
+ {
+    id: "earthQuestion",      
+    questionNumber: 6,
+    title: "What is the center of the earth called?",
+    A: "Hole",
+    B: "Core",
+    C: "Hell",
+    D: "Pulp",
+    correctAnswer: "B"
+ },
 ] ;
 
 
@@ -53,6 +96,7 @@ let rightAnswers = 0;
 var maxRightAnswers = questions.length;
 let totalQuestions = questions.length;
 let totalPoints = 0;
+let currentQuestionIndex = questions.length;
 
 var maxPoints = questions.length + "00";
 
@@ -91,7 +135,7 @@ questions.forEach(function(question, index) {
 document.getElementById('total_questions').textContent = totalQuestions;
 document.getElementById('right_answers').textContent = rightAnswers;
 document.getElementById('total_points').textContent = totalPoints;
-
+document.getElementById('current_question').textContent = currentQuestionIndex ;
 // Event listener for submitting the answers.
 document.getElementById('quiznos').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -105,27 +149,44 @@ document.getElementById('question-0').classList.add('current_question');
 document.getElementById('next').addEventListener('click', function() {
     var currentQuestion = document.querySelector('.current_question');
     var nextQuestion = currentQuestion.nextElementSibling;
+   
+    
     currentQuestion.classList.remove('current_question');
+currentQuestionIndex+= 1;
+    if(nextQuestion) {
     currentQuestion.style.display = 'none';
-   if(nextQuestion) {
+    }
+    if(nextQuestion) {
+       currentQuestion.style.display = 'none';
        nextQuestion.classList.add('current_question');
        nextQuestion.style.display = 'block';
-    }
-    if(nextQuestion === null) {
-        document.getElementById('next').style.display = 'none';
-    }
+       document.getElementById('next').disabled = false;
+    } else if(nextQuestion === null) {
+        
+        currentQuestion.classList.add('current_question');
+    } else  {
+        document.getElementById('question-0').classList.add('current_question');
+        currentQuestion.style.display = 'block';
+    } 
 });
 document.getElementById('prev').addEventListener('click', function() {
-    var currentQuestion = document.querySelector('.current_question');
-    var prevQuestion = currentQuestion.previouselementsibling;
-    currentQuestion.classList.add('current_question');
-    currentQuestion.style.display = 'none';
-   if(prevQuestion) {
+    var prevCurrentQuestion = document.querySelector('.current_question');
+    var prevQuestion = prevCurrentQuestion.previousElementSibling;
+    prevCurrentQuestion.classList.remove('current_question');
+currentQuestionIndex--;
+    if(prevQuestion) {
+        prevQuestion.style.display = 'none';
+    }
+    if(prevQuestion) {
+    prevCurrentQuestion.style.display = 'none';
        prevQuestion.classList.add('current_question');
        prevQuestion.style.display = 'block';
-    }
-    if(prevQuestion === null) {
-        document.getElementById('prev').style.display = 'none';
+       document.getElementById('prev').disabled = false;
+    }else if(prevQuestion === null) {
+        prevCurrentQuestion.classList.add('current_question');
+    } else {
+     document.getElementById('question-0').classList.add('current_question');
+     prevCurrentQuestion.style.display = 'block';
     }
 });
 
@@ -136,7 +197,7 @@ function checkAnswer(e) {
       var questionDiv = document.getElementById(`question-${index}`);
       var selectedAnswer = questionDiv.querySelector(`input[name="${question.id}"]:checked`);
       var halfway = questions.length / 2;
-      
+     
 // Check to see if user has submitted correct answers.
         if (selectedAnswer && selectedAnswer.value === question.correctAnswer) { 
             if(!question.answeredCorrectly) {
@@ -153,17 +214,17 @@ function checkAnswer(e) {
             alert('You are halfway through the quiz!');
             }
                 
+            console.log('right answer: ' + question.correctAnswer);
+            document.getElementById("total_questions").textContent = totalQuestions;
+            document.getElementById("right_answers").textContent = rightAnswers;
+            document.getElementById("total_points").textContent = totalPoints;
+
+            
             if (rightAnswers === questions.length) {
              console.log('you have finished the quiz!');
-             alert('We win!!');
              document.querySelector('.checkAnswers').classList.add('all-answered-true');
-             selectedAnswered.class
-             List.add('correct');
+             
             }
-        console.log('right answer: ' + question.correctAnswer);
-        document.getElementById("total_questions").textContent = totalQuestions;
-        document.getElementById("right_answers").textContent = rightAnswers;
-        document.getElementById("total_points").textContent = totalPoints;
         
         } else {
             console.log('wrong answer, correct was: ' + question.correctAnswer +  "" + question.title);
@@ -181,6 +242,9 @@ document.getElementById('quiznos').addEventListener('submit', function(e) {
     checkAnswer(e);
  
 });
+
+
+
 
 
 }
