@@ -129,11 +129,6 @@ if (document.getElementById('quiznos')) {
         quizContainer.appendChild(div);
     });
 
-   
-
-    
-    
-
     // update the elements with the quiz answers.
     document.getElementById('total_questions').textContent = totalQuestions;
     document.getElementById('right_answers').textContent = rightAnswers;
