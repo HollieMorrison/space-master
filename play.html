@@ -10,15 +10,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <title>Space Master</title>
+
+
+<title>Quiz | Space Master</title>
 </head>
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="assets/images/logo.png" alt="Space Master Logo">
+    </a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="play.html">Play</a></li>
+      <li><a href="rules.html">Rules</a></li>
+    </ul>
+  </nav>
+</header>
 <body class="play_page">
 <div class="play_wrap">
   <form class="quiz_cont" id="quiznos" >
     <!-- <div class="questions_map">
       <p>Question number: <span id="current_question"></span></p>
-    
+      
     </div> -->
+    <h1>Space Quiz</h1>
     <p class="question_count">Current Question: <span id="question_count"></span></p>
    <div id="questions" class="questions"></div>    
    <p class="last_question" id="last_question">This is the last question!</p>
@@ -59,7 +76,9 @@
 </div>
 
 <footer>
-
+  <div class="footer_wrap">
+    <p> &copy; Hollie Morrison 2024 </p>
+    </div>
   <script type="text/javascript" src="assets/js/script.js"></script>
 </footer>
 </body>

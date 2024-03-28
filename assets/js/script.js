@@ -36,56 +36,56 @@ if (document.getElementById('quiznos')) {
             D: "3",
             correctAnswer: "C"
         },
-        // {
-        //     id: "plutoQuestion",
-        //     questionNumber: 4,
-        //     title: "What planet was removed as being classed as a planet?",
-        //     A: "Jupiter",
-        //     B: "Neptune",
-        //     C: "Mercury",
-        //     D: "Pluto",
-        //     correctAnswer: "D"
-        // },
-        // {
-        //     id: "marsQuestion",
-        //     questionNumber: 5,
-        //     title: "What planet apart from Earth is said to be able to support life?",
-        //     A: "Jupiter",
-        //     B: "Neptune",
-        //     C: "Mercury",
-        //     D: "Mars",
-        //     correctAnswer: "D"
-        // },
-        // {
-        //     id: "jupiterQuestion",
-        //     questionNumber: 6,
-        //     title: "What planet is the largest in our solar system?",
-        //     A: "Jupiter",
-        //     B: "Neptune",
-        //     C: "Venus",
-        //     D: "Earth",
-        //     correctAnswer: "A"
-        // },
-        // {
-        //     id: "starQuestion",
-        //     questionNumber: 7,
-        //     title: "What is a star?",
-        //     A: "Dust",
-        //     B: "Water",
-        //     C: "Fire",
-        //     D: "Gas",
-        //     correctAnswer: "D"
-        // },
-        // {
-        //     id: "earthQuestion",
-        //     questionNumber: 8,
-        //     title: "What is the center of the earth called?",
-        //     A: "Hole",
-        //     B: "Core",
-        //     C: "Hell",
-        //     D: "Pulp",
-        //     correctAnswer: "B"
-        // },
+        {
+            id: "plutoQuestion",
+            questionNumber: 4,
+            title: "What planet was removed as being classed as a planet?",
+            A: "Jupiter",
+            B: "Neptune",
+            C: "Mercury",
+            D: "Pluto",
+            correctAnswer: "D"
+        },
+        {
+            id: "marsQuestion",
+            questionNumber: 5,
+            title: "What planet apart from Earth is said to be able to support life?",
+            A: "Jupiter",
+            B: "Neptune",
+            C: "Mercury",
+            D: "Mars",
+            correctAnswer: "D"
+        },
+        {
+            id: "jupiterQuestion",
+            questionNumber: 6,
+            title: "What planet is the largest in our solar system?",
+            A: "Jupiter",
+            B: "Neptune",
+            C: "Venus",
+            D: "Earth",
+            correctAnswer: "A"
+        },
+        {
+            id: "starQuestion",
+            questionNumber: 7,
+            title: "What is a star?",
+            A: "Dust",
+            B: "Water",
+            C: "Fire",
+            D: "Gas",
+            correctAnswer: "D"
+        },
+        {
+            id: "earthQuestion",
+            questionNumber: 8,
+            title: "What is the center of the earth called?",
+            A: "Hole",
+            B: "Core",
+            C: "Hell",
+            D: "Pulp",
+            correctAnswer: "B"
+        },
     ];
 
 

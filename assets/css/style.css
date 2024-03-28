@@ -17,6 +17,57 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: "Bebas Neue", sans-serif;
+  /* font-family: "Yarndings 12 Charted", system-ui; */
+  padding: 90px 0px;
+  overflow-y: scroll;
+  font-size: 16px;
+}
+
+html {
+  position: relative;
+  font-size: 16px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  padding-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+span {
+  font-size: 2rem;
+}
+
+button {
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Bebas Neue", sans-serif;
+  border: none;
 }
 
 /* Styles for h1 and color gradient used for text */
@@ -54,7 +105,7 @@ h1 {
 /* All paragraph tag styling */
 p {
   color: #fff;
-
+  font-size: 2rem;
 }
 
 /* Changing the default margin and padding for the unordered lists */
@@ -62,6 +113,10 @@ ul {
   margin: 0;
   padding: 0;
   margin: auto;
+}
+
+h3, h2 {
+  font-size: font-size: 2rem;
 }
 
 /* Styling for buttons */
@@ -129,7 +184,7 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: 100%;
+
   width: 100%;
 }
 
@@ -144,18 +199,41 @@ footer {
   gap: 20px;
 }
 
+@media (max-width: 768px) {
+  .play_page .play_wrap {
+    flex-direction: column-reverse;
+    padding: 0px 10px;
+    margin: 10px;
+  }
+}
+
 /* Styling for form in play wrapper */
 .play_page .play_wrap form {
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center; */
-  background-color: #808080;
-  width: 300px;
-  padding: 20px;
 
-  /* overflow-y: scroll; */
+  background-color: #808080;
+  width: 650px;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+  .play_page .play_wrap form {
+    padding: 15px;
+    width: 100%;
+  }
+}
+
+/* Media query for footer on mobile */
+@media (max-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    align-items: center;
+  }
+}
+
 
 /* Styling for form elements in play wrapper */
 .play_page .play_wrap form .form_elem {
@@ -164,6 +242,7 @@ footer {
   align-items: center;
   padding-bottom: 20px;
   gap: 10px;
+  font-size: 2rem;
 }
 
 .play_page .play_wrap form .form_elem:last-of-type {
