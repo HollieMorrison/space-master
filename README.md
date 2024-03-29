@@ -2,8 +2,8 @@
 
 Space Master is a short interactive educational quiz for all age groups that involves answering questions related to space and the solar system. Easy to navigate for all ages and users of technology
 
-![Am i repsonsive](./assets/readme/am-i-responsive-image.png)
-[View 5 super foods your body needs live project here](https://holliemorrison.github.io/superfoods/)
+![Am i repsonsive](./assets/images/readme/am-i-responsive.png)
+[View 5 super foods your body needs live project here](https://holliemorrison.github.io/space-master/)
 
 ## Table of contents :
 
@@ -50,9 +50,9 @@ People can interact with this short quiz and allows people of all ages to be inc
 * 8 fun questions about space.
 * In future, there would be more questions added.
 
-![Index.html](./assets/readme/index.html-pageshot.png)
-![Stories.html](./assets/readme/stories.html-pageshot.png)
-![Contact.html](./assets/readme/contact.html-pageshot.png)
+![index.html](./assets/images/readme/index-page-shot.png)
+![play.html](./assets/images/readme/play-page-shot.png)
+![rules.html](./assets/images/readme/rules-page-shot.png)
 
 ## Design
 
@@ -72,7 +72,7 @@ People can interact with this short quiz and allows people of all ages to be inc
 
 * [Github](https://github.com/)
     * Deployment of the website and storing the files online.
-* [Am I Responsive](https://ui.dev/amiresponsive?url=https://holliemorrison.github.io/superfoods/)
+* [Am I Responsive](https://ui.dev/amiresponsive?url=https://holliemorrison.github.io/space-master/)
     * Mockup picture for the README file.
 * [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -84,6 +84,7 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 
  * [W3C Markup Validtor](https://validator.w3.org/)
  * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+ * [JShint Javascript Validator](https://jshint.com/)
 
 ### Validation results
 
@@ -91,39 +92,33 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 <summary>index.html
 </summary>
 
-![Index Page validation result](./assets/readme/html-validation.png)
+![Index Page validation result](./assets/images/readme/index-html-validation.png)
 </details>
 <details>
 <summary>play.html
 </summary>
 
-![Contact page validation result](./assets/readme/html-validation.png)
+![Play page validation result](./assets/images/readme/play-html-validation.png)
 </details>
 <details>
 <summary>rules.html
 </summary>
 
-![Thanks page validation result](./assets/readme/html-validation.png)
+![Rules page validation result](./assets/images/readme/rules-html-validation.png)
+</details>
+
+<summary>style.css
+</summary>
+
+![CSS validation result](./assets/images/readme/style-css-validation.png)
 </details>
 <details>
-<summary>thanks.html
+<summary>JavaScript
 </summary>
 
-
-![CSS validation result](./assets/readme/html-validation.png)
+![JavaScript validation result](./assets/images/readme/jshint-validation.png)
 </details>
 
-<summary>contact.css
-</summary>
-
-![CSS validation result](./assets/readme/css-validation.png)
-</details>
-
-<summary>home.css
-</summary>
-
-![CSS validation result](./assets/readme/css-validation.png)
-</details>
 
 ### Manual Testing
 
@@ -140,25 +135,19 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 <summary>Index Page
 </summary>
 
-![Index Page lighthouse report](./assets/readme/index.html-lighthouse-mobile.png)
+![Index Page lighthouse report](./assets/images/readme/index-lighthouse-mobile.png)
 </details>
 <details>
-<summary>Stories Page
+<summary>Play Page
 </summary>
 
-![Stories Page lighthouse report](./assets/readme/stories.html-lighthouse-mobile.png)
+![Play Page lighthouse report](./assets/images/readme/play-lighthouse-mobile.png)
 </details>
 <details>
-<summary>Contact Page
+<summary>Rules Page
 </summary>
 
-![Contact Page lighthouse report](./assets/readme/contact.html-lighthouse-mobile.png)
-</details>
-<details>
-<summary>Thanks Page
-</summary>
-
-![Thanks Page lighthouse report](./assets/readme/thanks.html-lighthouse-mobile.png)
+![Rules Page lighthouse report](./assets/images/readme/rules-lighthouse-mobile.png)
 </details>
 
 #### Desktop analysis
@@ -166,25 +155,19 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 <summary>Index Page
 </summary>
 
-![Index Page lighthouse report](./assets/readme/index.html-lighthouse-desktop.png)
+![Index Page lighthouse report](./assets/images/readme/index-lighthouse-desktop.png)
 </details>
 <details>
-<summary>Stories
+<summary>Play
 </summary>
 
-![Stories lighthouse report](./assets/readme/stories.html-lighthouse-desktop.png)
+![Play lighthouse report](./assets/images/readme/play-lighthouse-desktop.png)
 </details>
 <details>
-<summary>Contact Page
+<summary>Rules Page
 </summary>
 
-![Contact Page lighthouse report](./assets/readme/contact.html-lighthouse-desktop.png)
-</details>
-<details>
-<summary>Thanks Page
-</summary>
-
-![Thanks Page lighthouse report](./assets/readme/thanks.html-lighthouse-desktop.png)
+![Contact Page lighthouse report](./assets/images/readme/rules-lighthouse-desktop.png)
 </details>
 
 ---
@@ -194,24 +177,24 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 ### GitHub Pages
 
 GitHub Pages used to deploy live version of the website.
-1. Log in to GitHub and locate [GitHub Repository Space-master](https://holliemorrison.github.io/superfoods/)
+1. Log in to GitHub and locate [GitHub Repository Space-master](https://holliemorrison.github.io/space-master/)
 2. At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
 3. Scroll down the Settings page until you locate "GitHub Pages".
 4. Under "Source", click the dropdown menu "None" and select "Main" and click "Save".
 5. The page will automatically refresh.
-6. Scroll back to locate the now-published site [link](https://holliemorrison.github.io/superfoods/index.html) in the "GitHub Pages" section.
+6. Scroll back to locate the now-published site [link](https://holliemorrison.github.io/space-master/index.html) in the "GitHub Pages" section.
 
 ### Forking the GitHub Repository
 
 By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
 
-1. Log in to GitHub and locate [GitHub Repository Space-master](https://holliemorrison.github.io/superfoods/)
+1. Log in to GitHub and locate [GitHub Repository Space-master](https://holliemorrison.github.io/space-master/)
 2. At the top of the Repository(under the main navigation) locate "Fork" button.
 3. Now you should have a copy of the original repository in your GitHub account.
 
 ### Local Clone
 
-1. Log in to GitHub and locate [GitHub Repository Space-master](https://holliemorrison.github.io/superfoods/)
+1. Log in to GitHub and locate [GitHub Repository Space-master](https://holliemorrison.github.io/space-master/)
 2. Under the repository name click "Clone or download"
 3. Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open Git Bash

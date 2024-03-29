@@ -1,5 +1,6 @@
 // check if an element with the id 'quiznos' exists within the document.
-if (document.getElementById('quiznos')) {
+
+if (document.getElementById('quiznos')){
 
     // get the element with the id 'quiznos'
     var quiz = document.getElementById('quiznos');
@@ -144,27 +145,27 @@ if (document.getElementById('quiznos')) {
     document.getElementById('question-0').style.display = 'block';
     document.getElementById('question-0').classList.add('current_question');
 
-var question_count = document.getElementById('question_count');
-var currentIndex = 0;
+    var question_count = document.getElementById('question_count');
+    var currentIndex = 0;
 
 
-question_count.textContent = currentIndex;
+    question_count.textContent = currentIndex;
 
-document.getElementById('next').addEventListener('click', function () {
-    if (currentIndex <= totalQuestions - 1) {
+    document.getElementById('next').addEventListener('click', function () {
+        if (currentIndex <= totalQuestions - 1) {
 
-        currentIndex += 1;
-        question_count.textContent = currentIndex;
-    }   
-});
+            currentIndex += 1;
+            question_count.textContent = currentIndex;
+        }
+    });
 
-document.getElementById('prev').addEventListener('click', function () {
-    if (currentIndex > 1) {
-        currentIndex -= 1;
-        question_count.textContent = currentIndex;
-    }
-});
- 
+    document.getElementById('prev').addEventListener('click', function () {
+        if (currentIndex > 1) {
+            currentIndex -= 1;
+            question_count.textContent = currentIndex;
+        }
+    });
+
 
 
     // Event listener for the next button.
@@ -172,10 +173,8 @@ document.getElementById('prev').addEventListener('click', function () {
         var currentQuestion = document.querySelector('.current_question');
         var nextQuestion = currentQuestion.nextElementSibling;
         currentQuestion.classList.remove('current_question');
-        console.log(totalQuestions)
-        if (nextQuestion) {
-            currentQuestion.style.display = 'none';
-        }
+        
+       
         if (nextQuestion) {
             currentQuestion.style.display = 'none';
             nextQuestion.classList.add('current_question');
@@ -191,14 +190,11 @@ document.getElementById('prev').addEventListener('click', function () {
     document.getElementById('prev').addEventListener('click', function () {
         var prevCurrentQuestion = document.querySelector('.current_question');
         var prevQuestion = prevCurrentQuestion.previousElementSibling;
-        
-        
+
+
         prevCurrentQuestion.classList.remove('current_question');
         currentQuestionIndex--;
-        console.log(currentQuestionIndex);
         
-      
-        console.log(totalQuestions)
         if (prevQuestion) {
             prevQuestion.style.display = 'none';
         }
@@ -235,33 +231,23 @@ document.getElementById('prev').addEventListener('click', function () {
                     question.answeredCorrectly = true;
                 }
                 if (rightAnswers.value >= halfway.value) {
-                    console.log('you are halfway through the quiz!');
                     alert('You are halfway through the quiz!');
                 }
 
-
-
-                console.log('right answer: ' + question.correctAnswer);
                 document.getElementById("total_questions").textContent = totalQuestions;
                 document.getElementById("right_answers").textContent = rightAnswers;
                 document.getElementById("total_points").textContent = totalPoints;
 
-
                 if (rightAnswers === questions.length) {
-                    console.log('you have finished the quiz!');
                     document.querySelector('.checkAnswers').classList.add('all-answered-true');
 
                     document.querySelector('.winner_wrap').classList.add('show');
 
                 }
 
-            } else {
-                console.log('wrong answer, correct was: ' + question.correctAnswer + "" + question.title);
             }
-
         });
 
-        console.log('right answers: ' + rightAnswers);
 
     }
 
